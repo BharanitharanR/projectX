@@ -1,5 +1,11 @@
 import React from "react";
 import { AppBar, Toolbar, Typography, Button, Container, Box } from "@mui/material";
+import { signInWithGoogle } from "./firebase"; // Adjust the path as needed
+const LoginButton = () => (
+  <Button variant="contained" color="primary" onClick={signInWithGoogle}>
+    Login with Google
+  </Button>
+);
 
 function App() {
   return (
@@ -10,7 +16,7 @@ function App() {
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
             My AI Product
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button color="inherit" onClick={signInWithGoogle}>Login</Button>
         </Toolbar>
       </AppBar>
 
