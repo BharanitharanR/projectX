@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-
+import { getAuth, GoogleAuthProvider, signInWithPopup ,signOut} from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -21,11 +21,26 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
-export const signInWithGoogle = async () => {
+export const signInWithGoogle = async (navigate) => {
   try {
     const result = await signInWithPopup(auth, provider);
     console.log(result.user);
+    // Redirect to the Dashboard
+    navigate("/Dashboard");
   } catch (error) {
     console.error(error);
+  }
+};
+
+// Function to log out from Firebase
+export const signOutFromGoogle = async (navigate) => {
+  const auth = getAuth();
+  try {
+    await signOut(auth); // Sign out from Firebase
+    console.log("User signed out successfully");
+    // Optionally, navigate to login page after logout
+    navigate("/");// Redirect to the login page (or use `navigate('/login')` if inside a component)
+  } catch (error) {
+    console.error("Error signing out: ", error);
   }
 };
