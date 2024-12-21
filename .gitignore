@@ -1,2 +1,5 @@
 /parser-ui/node_modules
 /material-ui
+/parser-core/bin
+/parser-core/lib
+parser-core/pyvenv.cfg
