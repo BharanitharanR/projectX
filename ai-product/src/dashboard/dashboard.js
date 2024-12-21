@@ -1,6 +1,6 @@
 import React, { useEffect, useState }  from 'react';
 import { getAuth } from "firebase/auth";
-import { signOutFromGoogle } from "../firebase";
+import { signOutFromGoogle } from "../services/firebase";
 import { AppBar, Toolbar, Typography, Button, Container, Box, Card, Avatar, Menu, MenuItem , IconButton} from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import CssBaseline from '@mui/material/CssBaseline';

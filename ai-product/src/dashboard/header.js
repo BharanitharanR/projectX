@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import ColorModeSelect from '../shared-theme/ColorModeSelect';
 import { getAuth } from "firebase/auth";
-import { signOutFromGoogle } from "../firebase";
+import { signOutFromGoogle } from "../services/firebase";
 import { useNavigate } from "react-router-dom";
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Logout'];
