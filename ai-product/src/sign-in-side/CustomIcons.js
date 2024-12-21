@@ -118,3 +118,77 @@ export function GoogleIcon() {
     </SvgIcon>
   );
 }
+
+
+export function ResumeIcon({ size = 24, color = "black" }) {
+    return (
+      <SvgIcon>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="30"
+            height="30"
+                    fill="#34A853"
+        >
+
+        <path d="M7 2v20h10V2H7zm1 1h8v3H8V3zm0 5h8v3H8V8zm0 5h8v3H8v-3z" />
+        
+</svg>
+<text x="0" y="0" font-size="12">tAILor Made</text>
+        </SvgIcon>
+    );
+}
+
+
+export function TAILorMadeIcon() {
+  return (
+    <SvgIcon sx={{ height: 40, width: 160, mr: 2 }}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 160 40"
+        fill="none"
+        width="160"
+        height="40"
+      >
+        {/* Background Rectangle */}
+        <rect x="0" y="0" width="160" height="40" fill="#2F2F2F" rx="8" />
+
+        {/* Main Text */}
+        <text
+          x="10"
+          y="25"
+          fill="#E0E0E0"
+          fontSize="18"
+          fontFamily="Arial, Helvetica, sans-serif"
+          fontWeight="bold"
+        >
+          t
+        </text>
+        <text
+          x="20"
+          y="25"
+          fill="#FFC107"
+          fontSize="18"
+          fontFamily="Arial, Helvetica, sans-serif"
+          fontWeight="bold"
+        >
+          AI
+        </text>
+        <text
+          x="40"
+          y="25"
+          fill="#E0E0E0"
+          fontSize="18"
+          fontFamily="Arial, Helvetica, sans-serif"
+          fontWeight="bold"
+        >
+          Lor Made
+        </text>
+
+        {/* Decorative Circles */}
+        <circle cx="140" cy="20" r="8" fill="#BDBDBD" />
+        <circle cx="140" cy="20" r="5" fill="#424242" />
+      </svg>
+    </SvgIcon>
+  );
+}

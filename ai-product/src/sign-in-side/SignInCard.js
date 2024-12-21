@@ -12,7 +12,7 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import ForgotPassword from './ForgotPassword';
-import { GoogleIcon, FacebookIcon, SitemarkIcon } from './CustomIcons';
+import { GoogleIcon, FacebookIcon, SitemarkIcon ,TAILorMadeIcon} from './CustomIcons';
 import { useNavigate } from "react-router-dom";
 
 import { signInWithGoogle } from "../firebase";
@@ -100,9 +100,11 @@ export default function SignInCard() {
 
   return (
     <Card variant="outlined">
+      <TAILorMadeIcon sx={{ display: { xs: 'flex', md: 'none' } }}/>
       <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-        <SitemarkIcon />
+
       </Box>
+                    {/*
       <Typography
         component="h1"
         variant="h4"
@@ -110,12 +112,14 @@ export default function SignInCard() {
       >
         Sign in
       </Typography>
+
       <Box
         component="form"
         onSubmit={handleSubmit}
         noValidate
         sx={{ display: 'flex', flexDirection: 'column', width: '100%', gap: 2 }}
       >
+
         <FormControl>
           <FormLabel htmlFor="email">Email</FormLabel>
           <TextField
@@ -182,7 +186,7 @@ export default function SignInCard() {
           </span>
         </Typography>
       </Box>
-      <Divider>or</Divider>
+      <Divider>or</Divider> */}
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Button
           fullWidth
