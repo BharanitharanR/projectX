@@ -1,4 +1,4 @@
-import { signInWithGoogle }  from "../firebase"
+import { signInWithGoogle }  from "./firebase"
 
 const handleGoogleLogin = async (navigate) => {
 
