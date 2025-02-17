@@ -1,5 +1,2 @@
-/parser-ui/node_modules
-/material-ui
-/parser-core/bin
-/parser-core/lib
-parser-core/pyvenv.cfg
+# Created by venv; see https://docs.python.org/3/library/venv.html
+*
